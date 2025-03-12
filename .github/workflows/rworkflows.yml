@@ -25,7 +25,7 @@ jobs:
         - os: ubuntu-latest
           bioc: devel
           r: auto
-          cont: ghcr.io/bioconductor/bioconductor_docker:devel
+          cont: ghcr.io/bioconductor/bioconductor_docker:RELEASE_3_20
         - os: macOS-latest
           bioc: release
           r: auto
@@ -33,7 +33,7 @@ jobs:
           bioc: release
           r: auto
     steps:
-    - uses: neurogenomics/rworkflows@dev-faster-install
+    - uses: neurogenomics/rworkflows@master
       with:
         run_bioccheck: ${{ false }}
         run_rcmdcheck: ${{ true }}
