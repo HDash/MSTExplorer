@@ -26,7 +26,6 @@ jobs:
           bioc: devel
           r: auto
           cont: ghcr.io/bioconductor/bioconductor_docker:devel
-          rspm: https://packagemanager.rstudio.com/cran/__linux__/noble/release
         - os: macOS-latest
           bioc: release
           r: auto
@@ -34,7 +33,7 @@ jobs:
           bioc: release
           r: auto
     steps:
-    - uses: neurogenomics/rworkflows@master
+    - uses: neurogenomics/rworkflows@dev-faster-install
       with:
         run_bioccheck: ${{ false }}
         run_rcmdcheck: ${{ true }}
